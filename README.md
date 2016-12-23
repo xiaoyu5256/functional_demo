@@ -133,6 +133,7 @@
 无参数传入，返回一个结果
 
 代码实现：
+
     !java
     @FunctionalInterface
     public interface Supplier<T> {
@@ -140,6 +141,7 @@
     }
 
 代码示例:
+
     !java
     Supplier<Double> getPi = ()->Math.PI;
     System.out.println(getPi.get());
