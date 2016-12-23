@@ -97,6 +97,7 @@
         }
     }
 代码示例：
+
     !java
     Consumer<String> sayHi = x-> System.out.println("Hi,"+x);
     sayHi.accept("祝大师");
