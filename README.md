@@ -86,6 +86,7 @@
 # Consumer
 传入一个参数，无返回值，纯消费
 代码实现：
+
     !java
     @FunctionalInterface
     public interface Consumer<T> {

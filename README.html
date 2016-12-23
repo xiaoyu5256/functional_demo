@@ -348,24 +348,25 @@
       
       <!-- slide source: README.md -->
       <div class="slide-wrapper">
-        <div class="slide slide-9">
+        <div class="slide has_code slide-9">
           <div class="inner">
             
             <header><h1>Consumer</h1></header>
             
             
             <section><p>传入一个参数，无返回值，纯消费
-代码实现：
-    !java
-    @FunctionalInterface
-    public interface Consumer<T> {
-        void accept(T t);
-        default Consumer<T> andThen(Consumer&lt;? super T&gt; after) {
-            Objects.requireNonNull(after);
-            return (T t) -&gt; { accept(t); after.accept(t); };
-        }
-    }
-代码示例：
+代码实现：</p>
+<div class="highlight"><pre><span></span><span class="lineno">1 </span><span class="nd">@FunctionalInterface</span>
+<span class="lineno">2 </span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Consumer</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="o">{</span>
+<span class="lineno">3 </span>    <span class="kt">void</span> <span class="nf">accept</span><span class="o">(</span><span class="n">T</span> <span class="n">t</span><span class="o">);</span>
+<span class="lineno">4 </span>    <span class="k">default</span> <span class="n">Consumer</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">andThen</span><span class="o">(</span><span class="n">Consumer</span><span class="o">&lt;?</span> <span class="kd">super</span> <span class="n">T</span><span class="o">&gt;</span> <span class="n">after</span><span class="o">)</span> <span class="o">{</span>
+<span class="lineno">5 </span>        <span class="n">Objects</span><span class="o">.</span><span class="na">requireNonNull</span><span class="o">(</span><span class="n">after</span><span class="o">);</span>
+<span class="lineno">6 </span>        <span class="k">return</span> <span class="o">(</span><span class="n">T</span> <span class="n">t</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span> <span class="n">accept</span><span class="o">(</span><span class="n">t</span><span class="o">);</span> <span class="n">after</span><span class="o">.</span><span class="na">accept</span><span class="o">(</span><span class="n">t</span><span class="o">);</span> <span class="o">};</span>
+<span class="lineno">7 </span>    <span class="o">}</span>
+<span class="lineno">8 </span><span class="o">}</span>
+</pre></div>
+
+<p>代码示例：
     !java
     Consumer<String> sayHi = x-&gt; System.out.println("Hi,"+x);
     sayHi.accept("祝大师");</p></section>
