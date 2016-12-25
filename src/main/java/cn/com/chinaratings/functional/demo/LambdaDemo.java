@@ -1,4 +1,4 @@
-package cn.showmecode.functional.demo;
+package cn.com.chinaratings.functional.demo;
 
 import java.util.Arrays;
 import java.util.Comparator;

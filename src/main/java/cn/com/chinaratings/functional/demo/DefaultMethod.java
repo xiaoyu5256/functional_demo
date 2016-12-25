@@ -1,4 +1,4 @@
-package cn.showmecode.functional.demo;
+package cn.com.chinaratings.functional.demo;
 
 /**
  * Created by xiaoyu on 2016/12/24.
